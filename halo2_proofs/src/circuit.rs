@@ -193,7 +193,7 @@ impl<'r, F: Field> From<&'r mut dyn layouter::RegionLayouter<F>> for Region<'r, 
 
 impl<'r, F: Field> Region<'r, F> {
     /// Enables a selector at the given offset.
-    pub(crate) fn enable_selector<A, AR>(
+    pub fn enable_selector<A, AR>(
         &mut self,
         annotation: A,
         selector: &Selector,
